@@ -38,17 +38,17 @@ app.use("/admin", adminRoute);
 
 const Admin = require("./src/models/adminModel"); // Adjust the path as necessary
 
-// const createAdmin = async (email, password) => {
-//  try {
-//    const admin = new Admin({ email, password });
-//    await admin.save(); // The password will be automatically hashed before saving
-//    console.log("Admin created successfully");
-//    } catch (err) {
-//     console.error("Error creating admin:", err.message);
-//  } };
+const createAdmin = async (email, password) => {
+ try {
+   const admin = new Admin({ email, password });
+   await admin.save(); // The password will be automatically hashed before saving
+   console.log("Admin created successfully");
+   } catch (err) {
+    console.error("Error creating admin:", err.message);
+ } };
 
-// //  Example usage
-// createAdmin("admin@gmail.com", "admin123");
+//  Example usage
+createAdmin("admin@gmail.com", "admin123");
 
 
 
