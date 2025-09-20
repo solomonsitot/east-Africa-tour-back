@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: (origin, callback) => {
-      const allowedOrigins = ["http://localhost:5173","https://euc-front.vercel.app"];
+      const allowedOrigins = ["http://localhost:5173","https://east-africa-tour-operator.vercel.app"];
       if (allowedOrigins.includes(origin) || !origin) {
         callback(null, true); // Allow the origin
       } else {
